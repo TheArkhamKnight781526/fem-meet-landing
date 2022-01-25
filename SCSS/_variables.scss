@@ -1,0 +1,59 @@
+// Colors
+
+$cyan: #4d96a9;
+$cyan-light: #71c0d4;
+$purple: #855fb1;
+$purple-light: #b18bdd;
+$dark: #28283d;
+$grey: #87879d;
+$grey-light: #dddde2;
+$sky-blue: #8fe3f9;
+$lilac: #d9b8ff;
+$white: #fafafa;
+
+// Typography
+
+@mixin heading-1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+}
+
+@mixin heading-2 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+@mixin overline {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: $cyan;
+}
+
+@mixin body {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+// Sizing
+
+$mobile: 375px;
+$tablet: 765px;
+$desktop: 1440px;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

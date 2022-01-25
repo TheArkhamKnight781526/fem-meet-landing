@@ -1,0 +1,60 @@
+@import "_variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  font-family: "Red Hat Display";
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  min-width: $mobile;
+  overflow-x: hidden;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num-circle {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  z-index: 2;
+  cursor: pointer;
+
+  @include tablet {
+    margin-top: 80px;
+  }
+
+  @include desktop {
+    margin-top: 110px;
+  }
+
+  .line {
+    width: 1px;
+    height: 84px;
+    background: $grey-light;
+  }
+
+  span {
+    width: 56px;
+    height: 56px;
+    color: $grey;
+    border-radius: 50%;
+    background: $white;
+    display: grid;
+    place-items: center;
+    border: 1px solid $grey-light;
+  }
+}
